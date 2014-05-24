@@ -1,0 +1,411 @@
+{
+  "bounds": [
+    -119.9577,
+    37.3918,
+    -119.1008,
+    38.2617
+  ],
+  "center": [
+    -119.5238,
+    37.7537,
+    10
+  ],
+  "format": "png24",
+  "interactivity": false,
+  "minzoom": 10,
+  "maxzoom": 16,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "roads.mss",
+    "veg.mss",
+    "calveg.mss",
+    "hydro.mss",
+    "trails.mss",
+    "summits.mss",
+    "gnis.mss",
+    "boundary.mss",
+    "contours.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        -119.99483379504974,
+        37.36971782909956,
+        -119.06718181182843,
+        38.28943185699664
+      ],
+      "id": "hillshade",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hillshade/yose_10m_wm_hillshade.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "hillshade"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.88627462230845,
+        37.49220766056603,
+        -119.19949159660578,
+        38.1864564823432
+      ],
+      "id": "veg",
+      "class": "",
+      "Datasource": {
+        "file": "layers/landcover/yose/yose_97veg_clipped_wgs84.shp",
+        "id": "veg",
+        "project": "yosemite",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "veg"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.9577,
+        37.3918,
+        -119.1008,
+        38.2617
+      ],
+      "id": "calveg",
+      "class": "",
+      "Datasource": {
+        "file": "layers/landcover/calveg/calveg-merged.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "calveg"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.99416882155693,
+        37.36979761298727,
+        -119.06719373852977,
+        38.289394218484716
+      ],
+      "id": "contours-500",
+      "class": "",
+      "Datasource": {
+        "file": "layers/contours/500/contour_500ft_wgs84.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "contours-500"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.99475109372595,
+        37.369769041330116,
+        -119.06719373852977,
+        38.2894260820579
+      ],
+      "id": "contours-100",
+      "class": "",
+      "Datasource": {
+        "file": "layers/contours/100/contour_100ft_wgs84.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "contours-100"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.87565592204705,
+        37.500916892404,
+        -119.25786878354464,
+        38.08372202377863
+      ],
+      "id": "buildings",
+      "class": "",
+      "Datasource": {
+        "file": "layers/buildings/yose_buildings_wgs84.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "buildings"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -121.1589353223771,
+        34.95815547818343,
+        -116.95450612890319,
+        40.136161470102486
+      ],
+      "id": "hydro-flows",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/flows/all_flows.shp",
+        "id": "hydro-flows",
+        "project": "yosemite",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-flows"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -123.06160891942376,
+        34.21026681356549,
+        -115.50593753115167,
+        42.42263600081825
+      ],
+      "id": "hydro-lakes",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/lakes/all_lakes.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-lakes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -123.25112178579629,
+        34.30377348008702,
+        -115.38901973133316,
+        42.17204746787388
+      ],
+      "id": "hydro-areas",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/areas/all_areas.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-areas"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.88627462230845,
+        37.49220766056603,
+        -119.19949159660578,
+        38.1864564823432
+      ],
+      "id": "boundary",
+      "class": "",
+      "Datasource": {
+        "file": "layers/boundary/yose_park_boundary_wgs84.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "boundary"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -122.00110247072938,
+        35.37495800467349,
+        -117.875909968422,
+        40.456362177680965
+      ],
+      "id": "trails",
+      "class": "",
+      "Datasource": {
+        "file": "layers/trails/trails.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "trails"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -120.00101863438555,
+        37.37494150438171,
+        -119.00096557014831,
+        38.37491802511346
+      ],
+      "id": "roads",
+      "class": "",
+      "Datasource": {
+        "file": "layers/roads/yose_park_roads_wgs84.shp",
+        "id": "roads",
+        "project": "yosemite",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "roads"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.4373355,
+        37.6293435,
+        -119.205847,
+        37.8612476
+      ],
+      "id": "ranges",
+      "class": "",
+      "Datasource": {
+        "file": "layers/ranges/ranges.json",
+        "layer": "OGRGeoJSON"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ranges"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -120.9838314,
+        35.3488528,
+        -117.3556196,
+        39.9518379
+      ],
+      "id": "summits",
+      "class": "",
+      "Datasource": {
+        "file": "layers/summits/gnis_manual_summits.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "summits"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -121.1589353223771,
+        34.95815547818343,
+        -116.95450612890319,
+        40.136161470102486
+      ],
+      "id": "hydro-flows-labels",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/flows/all_flows.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-flows-labels"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -123.06160891942376,
+        34.21026681356549,
+        -115.50593753115167,
+        42.42263600081825
+      ],
+      "id": "hydro-lakes-labels",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/lakes/all_lakes.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-lakes-labels"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -122.00110247072938,
+        35.37495800467349,
+        -117.875909968422,
+        40.456362177680965
+      ],
+      "id": "trails-labels",
+      "class": "",
+      "Datasource": {
+        "file": "layers/trails/trails.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "trails-labels"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.9987944,
+        37.3921641,
+        -119.0665355,
+        38.2999166
+      ],
+      "id": "gnis",
+      "class": "",
+      "Datasource": {
+        "file": "layers/gnis/gnis_yose.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "gnis"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.99416882155693,
+        37.36979761298727,
+        -119.06719373852977,
+        38.289394218484716
+      ],
+      "id": "contours-500-labels",
+      "class": "",
+      "Datasource": {
+        "file": "layers/contours/500/contour_500ft_wgs84.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "contours-500-labels"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Yosemite Closed Contour",
+  "description": "",
+  "attribution": ""
+}

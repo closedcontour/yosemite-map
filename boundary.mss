@@ -1,0 +1,22 @@
+#boundary {
+  casing/line-color: yellow;
+  casing/line-width: 0;
+  line-color: #666;
+  line-width: 0;
+
+  [zoom = 10] {
+    casing/line-width: 1;
+    line-width: 0.5;
+  }
+  [zoom >= 11] {
+    line-width: 1;
+    casing/line-width: 1.5;
+    line-dasharray: 6,2,2,2;
+  }
+  [zoom >= 12] {
+    casing/line-width: 2;
+    line-width: 1.5;
+    line-dasharray: 6,2,2,2;
+  }
+
+}
