@@ -140,7 +140,7 @@
       "id": "hydro-flows",
       "class": "",
       "Datasource": {
-        "file": "layers/hydro/flows/all_flows.shp",
+        "file": "layers/hydro/flows/flows-clipped.shp",
         "id": "hydro-flows",
         "project": "yosemite",
         "srs": ""
@@ -162,7 +162,7 @@
       "id": "hydro-lakes",
       "class": "",
       "Datasource": {
-        "file": "layers/hydro/lakes/all_lakes.shp"
+        "file": "layers/hydro/lakes/lakes-clipped.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -200,7 +200,7 @@
       "id": "hydro-areas",
       "class": "",
       "Datasource": {
-        "file": "layers/hydro/areas/all_areas.shp"
+        "file": "layers/hydro/areas/areas-clipped.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
