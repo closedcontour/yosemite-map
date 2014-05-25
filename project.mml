@@ -375,7 +375,10 @@
       "id": "gnis",
       "class": "",
       "Datasource": {
-        "file": "layers/gnis/gnis_yose.shp"
+        "file": "layers/gnis/gnis_yose.shp",
+        "id": "gnis",
+        "project": "yosemite",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -401,6 +404,29 @@
       "srs": "",
       "advanced": {},
       "name": "contour-labels"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.9577,
+        37.3918,
+        -119.1008,
+        38.2617
+      ],
+      "id": "map-boundary",
+      "class": "",
+      "Datasource": {
+        "file": "layers/boundary/map-boundary.json",
+        "layer": "OGRGeoJSON",
+        "id": "map-boundary",
+        "project": "yosemite",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map-boundary"
     }
   ],
   "scale": 1,

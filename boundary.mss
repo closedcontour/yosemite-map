@@ -20,3 +20,10 @@
   }
 
 }
+
+#map-boundary {
+  line-color: black;
+  line-width: 2;
+  polygon-opacity: 1;
+  polygon-fill: white;
+}
