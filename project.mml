@@ -94,40 +94,21 @@
     {
       "geometry": "linestring",
       "extent": [
-        -119.99416882155693,
-        37.36979761298727,
-        -119.06719373852977,
-        38.289394218484716
+        -119.99479978963252,
+        37.369760242047654,
+        -119.06720037496245,
+        38.28942898230663
       ],
-      "id": "contours-500",
+      "id": "no-ice-contours",
       "class": "",
       "Datasource": {
-        "file": "layers/contours/500/contour_500ft_wgs84.shp"
+        "file": "layers/contours/no-ice-contour-40ft.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "contours-500"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -119.99475109372595,
-        37.369769041330116,
-        -119.06719373852977,
-        38.2894260820579
-      ],
-      "id": "contours-100",
-      "class": "",
-      "Datasource": {
-        "file": "layers/contours/100/contour_100ft_wgs84.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "contours-100"
+      "name": "no-ice-contours"
     },
     {
       "geometry": "polygon",
@@ -188,6 +169,25 @@
       "srs": "",
       "advanced": {},
       "name": "hydro-lakes"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.74810029381871,
+        37.60312045614064,
+        -119.14131180640403,
+        38.268052233796475
+      ],
+      "id": "ice-contours",
+      "class": "",
+      "Datasource": {
+        "file": "layers/contours/ice-contour-40ft.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ice-contours"
     },
     {
       "geometry": "polygon",
@@ -386,21 +386,21 @@
     {
       "geometry": "linestring",
       "extent": [
-        -119.99416882155693,
-        37.36979761298727,
-        -119.06719373852977,
-        38.289394218484716
+        -119.99479978963252,
+        37.369760242047654,
+        -119.06720037496245,
+        38.28942898230663
       ],
-      "id": "contours-500-labels",
+      "id": "contour-labels",
       "class": "",
       "Datasource": {
-        "file": "layers/contours/500/contour_500ft_wgs84.shp"
+        "file": "layers/contours/no-ice-contour-40ft.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "contours-500-labels"
+      "name": "contour-labels"
     }
   ],
   "scale": 1,

@@ -1,5 +1,6 @@
 // TODO: scale bump map
 // TODO: less dense bump map for shrub
+// TODO: change/scale marsh icon
 
 @rock: #EDE7DD;
 @shrub: #82ac77;

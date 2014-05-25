@@ -1,3 +1,7 @@
+// TODO: county line data
+// TODO: wilderness boundary
+// TODO: retina tiles
+
 @background: #dadada;
 
 Map {
@@ -12,15 +16,12 @@ Map {
 
 #hillshade {
   raster-opacity:1;
-  // TODO: interpolation
+  // TODO: interpolation at higher zoom levels
   raster-colorizer-stops:
     stop(0, @background)
     stop(1, #888)
     stop(256, #fff);
 }
-
-
-
 
 #ranges {
   line-width:0;
@@ -41,3 +42,4 @@ Map {
   text-transform: uppercase;
 
 }
+

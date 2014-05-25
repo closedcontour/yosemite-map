@@ -6,6 +6,8 @@
 // 43624 = Treatment reservoir
 // 46600 = Swamp/marsh
 
+// TODO: glacier labeling
+
 @water: rgb(136, 213, 234);
 @water-line: #3499ad;
 
@@ -99,6 +101,7 @@
 }
 
 #hydro-areas {
+  // TODO: variable line width
   line-color: @water-line;
   line-width:0.5;
   polygon-opacity:1;
