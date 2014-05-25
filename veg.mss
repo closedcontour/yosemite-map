@@ -44,15 +44,19 @@
     polygon-opacity: 0.3;
     /*polygon-fill: #C9D6D3;*/
     polygon-fill: @rock;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/forest-bump.png');
+      polygon-pattern-opacity: 0.1;
+    }
   }
 
   // Shrub
   [PIFINAL >= 5000][PIFINAL < 7551] {
     polygon-fill: @shrub;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/forest-bump.png');
+      polygon-pattern-opacity: 0.1;
+    }
   }
 
   // Forest
@@ -60,8 +64,10 @@
   [PIFINAL = 920],
   [PIFINAL >= 1000][PIFINAL < 5000] {
     polygon-fill: @forest;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.2;
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/forest-bump.png');
+      polygon-pattern-opacity: 0.2;
+    }
   }
 
   [PIFINAL >= 3070][PIFINAL <= 3076] {
@@ -84,33 +90,43 @@
   [PIFINAL = 700] {
     polygon-fill: @rock;
     polygon-opacity: 0.7;
-    polygon-pattern-file: url('img/talus.png');
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/talus.png');
+    }
   }
 
   // Meadow
   [PIFINAL >= 7000][PIFINAL < 8000] {
     polygon-fill: @meadow;
     polygon-opacity: 0.3;
-    polygon-pattern-file: url('img/bg-noise.png');
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/bg-noise.png');
+    }
   }
 
   [PIFINAL >= 8000][PIFINAL < 10000] {
     polygon-fill: @meadow;
     polygon-opacity: 0.3;
-    polygon-pattern-file: url('img/marsh.png');
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/marsh.png');
+    }
   }
 
   // Scree
   [PIFINAL = 200] {
     polygon-opacity: 0.7;
     polygon-fill: @rock;
-    polygon-pattern-file: url('img/scree.png');
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/scree.png');
+    }
   }
 
   [PIFINAL = 500] {
     polygon-fill: @rock;
     polygon-opacity: 0.7;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
+    [zoom >= 12] {
+      polygon-pattern-file: url('img/forest-bump.png');
+      polygon-pattern-opacity: 0.1;
+    }
   }
 }
