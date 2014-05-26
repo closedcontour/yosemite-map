@@ -86,6 +86,7 @@
 
 #hydro-flows-labels {
   // TODO: figure out which code is being rendered that makes Merced River show up
+  [GNIS_Name != 'None']
   [zoom >= 13] {
     text-face-name: 'DejaVu Sans Oblique';
     text-fill: darken(@water-line, 15%);

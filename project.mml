@@ -318,7 +318,7 @@
       "id": "hydro-flows-labels",
       "class": "",
       "Datasource": {
-        "file": "layers/hydro/flows/all_flows.shp"
+        "file": "layers/hydro/flows/flows-clipped-masked.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
