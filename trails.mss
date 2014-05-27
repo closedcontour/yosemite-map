@@ -1,4 +1,4 @@
-#trails [zoom >= 11] {
+#lines::trails[highway='path'][zoom >= 11] {
   line-color:#333;
 
   [zoom >= 13] {
@@ -20,17 +20,14 @@
     line-color: #222;
   }
 
-}
-
-#trails-labels {
-  [zoom >= 13][NAME != 'none'] {
+  [zoom >= 13][name != 'none'] {
     text-face-name: 'DejaVu Sans Book';
     text-fill: black;
     text-halo-fill: white;
     text-halo-radius: 0.5;
     text-size: 11;
 
-    text-name: [NAME];
+    text-name: [name];
     text-placement: line;
     text-dy: -7;
   }

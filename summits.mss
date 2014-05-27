@@ -1,9 +1,27 @@
 // TODO: get prominence or other value for displaying at zoomed out levels
 // TODO: smaller triangles
+// TODO: Use abbreviations for Mtn/Mt/Pk
 
-#summits {
+#points [natural='saddle'] {
   [zoom >= 12],
-  [zoom >= 11][sps='True'] {
+  [zoom >= 11] {
+    text-name: [name];
+    text-face-name: 'DejaVu Sans Book';
+    text-size: 9;
+    text-fill: #333;
+    text-halo-fill: white;
+    text-halo-radius: 1;
+    text-wrap-width: 20;
+
+    [zoom >= 13] {
+      text-size: 11;
+    }
+  }
+}
+
+#points [natural='peak'] {
+  [zoom >= 12],
+  [zoom >= 11] {
     marker-file: url('img/summit-black.png');
     marker-width: 5;
     marker-fill: black;
@@ -29,3 +47,4 @@
     }*/
   }
 }
+

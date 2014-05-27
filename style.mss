@@ -23,7 +23,9 @@ Map {
     stop(256, #fff);
 }
 
-#ranges {
+#lines::ridges[natural='valley'],
+#lines::ridges[natural='cliff'],
+#lines::ridges[natural='ridge'] {
   line-width:0;
   line-color: red;
 
@@ -33,6 +35,11 @@ Map {
   text-halo-radius: 0.7;
 
   text-size: 16;
+
+  [length<2500] {
+    text-size: 13;
+  }
+
   text-spacing: 500;
 
   text-name: "[name].replace(' ', '       ')";
@@ -42,3 +49,5 @@ Map {
   text-transform: uppercase;
 
 }
+
+

@@ -230,25 +230,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -122.00110247072938,
-        35.37495800467349,
-        -117.875909968422,
-        40.456362177680965
-      ],
-      "id": "trails",
-      "class": "",
-      "Datasource": {
-        "file": "layers/trails/trails.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "trails"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -120.00101863438555,
         37.37494150438171,
         -119.00096557014831,
@@ -267,45 +248,6 @@
       "srs": "",
       "advanced": {},
       "name": "roads"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -119.4373355,
-        37.6293435,
-        -119.205847,
-        37.8612476
-      ],
-      "id": "ranges",
-      "class": "",
-      "Datasource": {
-        "file": "layers/ranges/ranges.json",
-        "layer": "OGRGeoJSON"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "ranges"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -120.9838314,
-        35.3488528,
-        -117.3556196,
-        39.9518379
-      ],
-      "id": "summits",
-      "class": "",
-      "Datasource": {
-        "file": "layers/summits/gnis_manual_summits.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "summits"
     },
     {
       "geometry": "linestring",
@@ -348,43 +290,61 @@
     {
       "geometry": "linestring",
       "extent": [
-        -122.00110247072938,
-        35.37495800467349,
-        -117.875909968422,
-        40.456362177680965
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
       ],
-      "id": "trails-labels",
-      "class": "",
       "Datasource": {
-        "file": "layers/trails/trails.shp"
+        "type": "postgis",
+        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour",
+        "id": "lines",
+        "project": "yosemite",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "trails-labels"
+      "name": "lines"
     },
     {
       "geometry": "point",
       "extent": [
-        -119.9987944,
-        37.3921641,
-        -119.0665355,
-        38.2999166
+        -119.95706793878797,
+        37.39216410422054,
+        -119.10181510461175,
+        38.26127999314813
       ],
-      "id": "gnis",
-      "class": "",
       "Datasource": {
-        "file": "layers/gnis/gnis_yose.shp",
-        "id": "gnis",
-        "project": "yosemite",
-        "srs": ""
+        "type": "postgis",
+        "table": "planet_osm_point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353559.72,4493911.29,-13258353.41,4616401.95",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
       },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "points",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "gnis"
+      "name": "points"
     },
     {
       "geometry": "linestring",
@@ -430,7 +390,7 @@
     }
   ],
   "scale": 1,
-  "metatile": 2,
+  "metatile": 4,
   "name": "Yosemite Closed Contour",
   "description": "",
   "attribution": ""
