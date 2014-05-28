@@ -152,25 +152,6 @@
       "name": "hydro-flows"
     },
     {
-      "geometry": "polygon",
-      "extent": [
-        -123.06160891942376,
-        34.21026681356549,
-        -115.50593753115167,
-        42.42263600081825
-      ],
-      "id": "hydro-lakes",
-      "class": "",
-      "Datasource": {
-        "file": "layers/hydro/lakes/lakes-clipped.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "hydro-lakes"
-    },
-    {
       "geometry": "linestring",
       "extent": [
         -119.74810029381871,
@@ -188,6 +169,25 @@
       "srs": "",
       "advanced": {},
       "name": "ice-contours"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -123.06160891942376,
+        34.21026681356549,
+        -115.50593753115167,
+        42.42263600081825
+      ],
+      "id": "hydro-lakes",
+      "class": "",
+      "Datasource": {
+        "file": "layers/hydro/lakes/lakes-clipped.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hydro-lakes"
     },
     {
       "geometry": "polygon",

@@ -2,6 +2,7 @@
 // TODO: smaller triangles
 // TODO: Use abbreviations for Mtn/Mt/Pk
 
+#points [natural='meadow'],
 #points [natural='saddle'] {
   [zoom >= 12],
   [zoom >= 11] {
@@ -45,6 +46,30 @@
       text-halo-fill: yellow;
       text-halo-radius: 1;
     }*/
+  }
+}
+
+#points [natural='waterfall'] {
+  [zoom >= 12],
+  [zoom >= 11] {
+    marker-width: 6;
+    marker-fill: @water-line;
+    marker-line-width: 0;
+    marker-allow-overlap: true;
+    text-name: [name];
+    text-face-name: 'DejaVu Sans Book';
+    text-placement-type: simple;
+    text-placements: "E,NE,SE,W,NW,SW";
+    text-dx: 5;
+    text-size: 9;
+    text-wrap-width: 20;
+    text-fill: darken(@water-line, 15%);
+    text-halo-fill: lighten(@water, 10%);
+    text-halo-radius: 0.5;
+
+    [zoom >= 13] {
+      text-size: 11;
+    }
   }
 }
 

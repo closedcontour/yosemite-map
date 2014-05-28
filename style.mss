@@ -23,6 +23,25 @@ Map {
     stop(256, #fff);
 }
 
+// TODO: correct data to use mountain range where appropriate
+#lines::glaciers[natural='glacier'] {
+  line-width:0;
+  line-color: red;
+
+  text-face-name: 'DejaVu Sans Oblique';
+  text-fill: @water-line;
+  text-halo-fill: white;
+  text-halo-radius: 0.7;
+
+  text-size: 13;
+
+  text-name: [name];
+  text-placement: line;
+  //text-character-spacing: 10;
+  /*text-max-char-angle-delta: 15;*/
+}
+
+#lines::ridges[natural='mountain_range'],
 #lines::ridges[natural='valley'],
 #lines::ridges[natural='cliff'],
 #lines::ridges[natural='ridge'] {
