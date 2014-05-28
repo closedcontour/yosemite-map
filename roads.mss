@@ -1,26 +1,16 @@
 // TODO: road labels
 
-// X 1 – (167) Primary roads
-// X 2 – (118) Secondary roads
-// X 3 – (152) Residential roads
-// X 4 – (186) Campground roads
-// X 5 – (75) Tertiary park service roads
-// X 7 – (214) Dirt roads
-// X 8 – (8) Gravel roads
-// X 9 – (67) Parking lots/pullouts
-// X 10 – (1) Tunnels
-
 @primary-road-color: #ffffbf;
-/*@primary-road-color: red;*/
 
-#roads {
-  line-width: 0;
-
-  // CLASS=10 -> Wawona Tunnel
-  [CLASS=1],
-  [CLASS=10] {
+#lines::roads[highway="primary"],
+#lines::roads[highway="secondary"],
+#lines::roads[highway="tertiary"],
+#lines::roads[highway="service"] {
+  // tunnel=yes -> Wawona Tunnel
+  [highway="primary"],
+  [tunnel="yes"] {
     ::casing {
-      [CLASS=10] {
+      [tunnel="yes"] {
         line-dasharray: 4,2;
       }
       line-color: #555;
@@ -30,7 +20,7 @@
       [zoom >= 14] { line-width: 5.0; }
     }
     ::main {
-      [CLASS=10] {
+      [tunnel="yes"] {
         line-dasharray: 4,2;
       }
 
@@ -42,7 +32,7 @@
     }
   }
 
-  [CLASS=2] {
+  [highway="secondary"] {
     ::casing {
       line-color: #555;
       [zoom <= 11] { line-width: 0; }
@@ -59,8 +49,8 @@
     }
   }
 
-  [CLASS=3],
-  [CLASS=5] {
+  [highway="tertiary"],
+  [highway="service"][service="park"] {
     ::casing {
       line-color: #555;
       [zoom <= 12] { line-width: 0; }
@@ -75,8 +65,8 @@
     }
   }
 
-  [CLASS=9],
-  [CLASS=4] {
+  [highway="service"][service="parking_aisle"],
+  [highway="service"][service="campground"] {
     ::casing {
       line-color: #555;
       [zoom <= 13] { line-width: 0; }
@@ -92,8 +82,8 @@
     }
   }
 
-  [CLASS=7],
-  [CLASS=8] {
+  [surface="dirt"],
+  [surface="gravel"] {
     ::casing {
       line-color: #555;
       [zoom <= 12] { line-width: 0; }
@@ -108,5 +98,4 @@
       [zoom >= 14] { line-width: 2.0; }
     }
   }
-
 }

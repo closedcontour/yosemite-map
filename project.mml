@@ -230,28 +230,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -120.00101863438555,
-        37.37494150438171,
-        -119.00096557014831,
-        38.37491802511346
-      ],
-      "id": "roads",
-      "class": "",
-      "Datasource": {
-        "file": "layers/roads/yose_park_roads_wgs84.shp",
-        "id": "roads",
-        "project": "yosemite",
-        "srs": ""
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "roads"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -121.1589353223771,
         34.95815547818343,
         -116.95450612890319,
