@@ -4,6 +4,7 @@
 
 #lines::roads[highway="primary"],
 #lines::roads[highway="secondary"],
+#lines::roads[highway="residential"],
 #lines::roads[highway="tertiary"],
 #lines::roads[highway="service"] {
   // tunnel=yes -> Wawona Tunnel
@@ -49,6 +50,7 @@
     }
   }
 
+  [highway="residential"],
   [highway="tertiary"],
   [highway="service"][service="park"] {
     ::casing {

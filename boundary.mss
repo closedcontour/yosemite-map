@@ -1,4 +1,4 @@
-#boundary {
+#lines::boundary[boundary="national_park"] {
   casing/line-color: yellow;
   casing/line-width: 0;
   line-color: #666;

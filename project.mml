@@ -130,26 +130,31 @@
       "name": "buildings"
     },
     {
-      "geometry": "linestring",
       "extent": [
-        -121.1589353223771,
-        34.95815547818343,
-        -116.95450612890319,
-        40.136161470102486
+        -119.95769990359035,
+        37.483806813234544,
+        -119.16079004200338,
+        37.88661886799398
       ],
-      "id": "hydro-flows",
-      "class": "",
       "Datasource": {
-        "file": "layers/hydro/flows/flows-clipped.shp",
-        "id": "hydro-flows",
-        "project": "yosemite",
-        "srs": ""
+        "type": "postgis",
+        "table": "planet_osm_polygon",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4506759.49,-13264918.47,4563421.22",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
       },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "polygons",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "hydro-flows"
+      "name": "polygons"
     },
     {
       "geometry": "linestring",
@@ -169,101 +174,6 @@
       "srs": "",
       "advanced": {},
       "name": "ice-contours"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -123.06160891942376,
-        34.21026681356549,
-        -115.50593753115167,
-        42.42263600081825
-      ],
-      "id": "hydro-lakes",
-      "class": "",
-      "Datasource": {
-        "file": "layers/hydro/lakes/lakes-clipped.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "hydro-lakes"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -123.25112178579629,
-        34.30377348008702,
-        -115.38901973133316,
-        42.17204746787388
-      ],
-      "id": "hydro-areas",
-      "class": "",
-      "Datasource": {
-        "file": "layers/hydro/areas/areas-clipped.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "hydro-areas"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -119.88627462230845,
-        37.49220766056603,
-        -119.19949159660578,
-        38.1864564823432
-      ],
-      "id": "boundary",
-      "class": "",
-      "Datasource": {
-        "file": "layers/boundary/yose_park_boundary_wgs84.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "boundary"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -121.1589353223771,
-        34.95815547818343,
-        -116.95450612890319,
-        40.136161470102486
-      ],
-      "id": "hydro-flows-labels",
-      "class": "",
-      "Datasource": {
-        "file": "layers/hydro/flows/flows-clipped-masked.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "hydro-flows-labels"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -123.06160891942376,
-        34.21026681356549,
-        -115.50593753115167,
-        42.42263600081825
-      ],
-      "id": "hydro-lakes-labels",
-      "class": "",
-      "Datasource": {
-        "file": "layers/hydro/lakes/all_lakes.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "hydro-lakes-labels"
     },
     {
       "geometry": "linestring",
