@@ -1,4 +1,3 @@
-@contour-color: #88724e;
 
 #ice-contours {
   line-color: @water-line;
@@ -81,10 +80,9 @@
     text-name: [elev_ft];
     text-placement: line;
     text-fill: @contour-color;
-    text-face-name: 'DejaVu Serif Book';
-    // TODO: better halo/back-fill
-    text-halo-fill: #ddd;
-    text-halo-radius: 1;
-    text-size: 9;
+    text-face-name: @sans;
+    text-halo-fill: @halo-fill;
+    text-halo-radius: @halo-radius;
+    text-size: @xs;
   }
 }

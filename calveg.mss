@@ -7,15 +7,6 @@
   polygon-opacity: 0.5;
 
 /*
-1:  >60%
-2:  40-60%
-3:  25-40%
-4:  10-25%
-5:  2-10%
-6:  0-2%
-9:  Not Applicable
-
-
 00   less than 1 percent
 05   1 - 9.9 percent
 15   10 - 19.9 percent
@@ -96,85 +87,4 @@
     polygon-opacity: 0.5;
   }
 
-
-/*  polygon-fill: red;
-
-  [PIFINAL < 910],
-  [PIFINAL > 920][PIFINAL < 1000] {
-  	polygon-opacity:0;
-  }
-
-  // Dome-y Rock
-  [PIFINAL >= 961][PIFINAL <= 964] {
-    polygon-opacity: 0.3;
-    polygon-fill: @rock;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
-  }
-
-  // Shrub
-  [PIFINAL >= 5000][PIFINAL < 7551] {
-    polygon-fill: #82ac77;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
-  }
-
-  // Forest
-  [PIFINAL = 910],
-  [PIFINAL = 920],
-  [PIFINAL >= 1000][PIFINAL < 5000] {
-    polygon-fill: rgb(90, 165, 86);
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.2;
-  }
-
-  [PIFINAL >= 3070][PIFINAL <= 3076] {
-    polygon-fill: lighten(rgb(90, 165, 86), 40%);
-
-    // TODO: less dense bump
-  }
-
-  // Urban
-  [PIFINAL = 990] {
-    polygon-fill: #ccc;
-    polygon-opacity: 0.7;
-    line-width: 0.5;
-    line-color: #aaa;
-  }
-
-  // Talus
-  [PIFINAL = 100],
-  [PIFINAL = 950],
-  [PIFINAL = 700] {
-    polygon-fill: @rock;
-    polygon-opacity: 0.7;
-    polygon-pattern-file: url('img/talus.png');
-  }
-
-  // Meadow
-  [PIFINAL >= 7000][PIFINAL < 8000] {
-    polygon-fill: #DCF5AE;
-    polygon-opacity: 0.3;
-    polygon-pattern-file: url('img/bg-noise.png');
-  }
-
-  [PIFINAL >= 8000][PIFINAL < 10000] {
-    polygon-fill: #DCF5AE;
-    polygon-opacity: 0.3;
-    polygon-pattern-file: url('img/marsh.png');
-  }
-
-  // Scree
-  [PIFINAL = 200] {
-    polygon-opacity: 0.7;
-    polygon-fill: @rock;
-    polygon-pattern-file: url('img/scree.png');
-  }
-
-  [PIFINAL = 500] {
-    polygon-fill: @rock;
-    polygon-opacity: 0.7;
-    polygon-pattern-file: url('img/forest-bump.png');
-    polygon-pattern-opacity: 0.1;
-  }*/
 }

@@ -1,7 +1,5 @@
 // TODO: road labels
 
-@primary-road-color: #ffffbf;
-
 #lines::roads[highway="primary"],
 #lines::roads[highway="secondary"],
 #lines::roads[highway="residential"],
@@ -14,7 +12,7 @@
       [tunnel="yes"] {
         line-dasharray: 4,2;
       }
-      line-color: #555;
+      line-color: @road-casing;
       [zoom <= 11] { line-width: 1.5; }
       [zoom = 12] { line-width: 2.0; }
       [zoom = 13] { line-width: 3.0; }
@@ -25,7 +23,7 @@
         line-dasharray: 4,2;
       }
 
-      line-color: @primary-road-color;
+      line-color: @road-color;
       [zoom <= 11] { line-width: 1.0; }
       [zoom = 12] { line-width: 1.5; }
       [zoom = 13] { line-width: 2.5; }
@@ -35,14 +33,14 @@
 
   [highway="secondary"] {
     ::casing {
-      line-color: #555;
+      line-color: @road-casing;
       [zoom <= 11] { line-width: 0; }
       [zoom = 12] { line-width: 1.5; }
       [zoom = 13] { line-width: 2.0; }
       [zoom >= 14] { line-width: 4.0; }
     }
     ::main {
-      line-color: @primary-road-color;
+      line-color: @road-color;
       [zoom <= 11] { line-width: 0; }
       [zoom = 12] { line-width: 1.0; }
       [zoom = 13] { line-width: 1.5; }
@@ -54,13 +52,13 @@
   [highway="tertiary"],
   [highway="service"][service="park"] {
     ::casing {
-      line-color: #555;
+      line-color: @road-casing;
       [zoom <= 12] { line-width: 0; }
       [zoom = 13] { line-width: 1.5; }
       [zoom >= 14] { line-width: 3.0; }
     }
     ::main {
-      line-color: @primary-road-color;
+      line-color: @road-color;
       [zoom <= 12] { line-width: 0; }
       [zoom = 13] { line-width: 1.0; }
       [zoom >= 14] { line-width: 2.0; }
@@ -70,13 +68,13 @@
   [highway="service"][service="parking_aisle"],
   [highway="service"][service="campground"] {
     ::casing {
-      line-color: #555;
+      line-color: @road-casing;
       [zoom <= 13] { line-width: 0; }
       [zoom = 14] { line-width: 1.5; }
       [zoom >= 15] { line-width: 2.0; }
     }
     ::main {
-      line-color: @primary-road-color;
+      line-color: @road-color;
       [zoom <= 12] { line-width: 0; }
       [zoom = 13] { line-width: 0.7; }
       [zoom = 14] { line-width: 1.0; }
@@ -87,13 +85,13 @@
   [surface="dirt"],
   [surface="gravel"] {
     ::casing {
-      line-color: #555;
+      line-color: @road-casing;
       [zoom <= 12] { line-width: 0; }
       [zoom = 13] { line-width: 1.5; }
       [zoom >= 14] { line-width: 3.0; }
     }
     ::main {
-      line-color: @primary-road-color;
+      line-color: @road-color;
       line-dasharray: 5,1;
       [zoom <= 12] { line-width: 0; }
       [zoom = 13] { line-width: 1.0; }

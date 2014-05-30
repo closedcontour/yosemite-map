@@ -22,7 +22,9 @@
     "calveg.mss",
     "hydro.mss",
     "trails.mss",
-    "summits.mss",
+    "line-labels.mss",
+    "point-labels.mss",
+    "polygon-labels.mss",
     "gnis.mss",
     "boundary.mss",
     "contours.mss"
@@ -111,43 +113,27 @@
       "name": "no-ice-contours"
     },
     {
-      "geometry": "polygon",
-      "extent": [
-        -119.87565592204705,
-        37.500916892404,
-        -119.25786878354464,
-        38.08372202377863
-      ],
-      "id": "buildings",
-      "class": "",
-      "Datasource": {
-        "file": "layers/buildings/yose_buildings_wgs84.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "buildings"
-    },
-    {
       "extent": [
         -119.95769990359035,
-        37.483806813234544,
-        -119.16079004200338,
-        37.88661886799398
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "planet_osm_polygon",
+        "table": "(select * from planet_osm_polygon order by way_area desc) as polys",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
-        "extent": "-13353630.07,4506759.49,-13264918.47,4563421.22",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
         "dbname": "closedcontour",
         "host": "localhost",
         "port": "5432",
         "user": "closedcontour",
-        "password": "closedcontour"
+        "password": "closedcontour",
+        "id": "polygons2",
+        "project": "yosemite",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "polygons",
       "class": "",
@@ -233,6 +219,92 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "points"
+    },
+    {
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_polygon order by way_area desc) as polys",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour",
+        "id": "polygon-labels",
+        "project": "yosemite",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "polygon-labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "polygon-labels"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "line-labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "line-labels"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.95706793878797,
+        37.39216410422054,
+        -119.10181510461175,
+        38.26127999314813
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353559.72,4493911.29,-13258353.41,4616401.95",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "point-labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "point-labels"
     },
     {
       "geometry": "linestring",

@@ -1,7 +1,7 @@
 #lines::boundary[boundary="national_park"] {
-  casing/line-color: yellow;
+  casing/line-color: @boundary;
   casing/line-width: 0;
-  line-color: #666;
+  line-color: @medium;
   line-width: 0;
 
   [zoom = 10] {
@@ -18,7 +18,6 @@
     line-width: 1.5;
     line-dasharray: 6,2,2,2;
   }
-
 }
 
 #map-boundary {

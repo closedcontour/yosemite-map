@@ -4,14 +4,45 @@
 
 @background: #dadada;
 
+@sans: 'DejaVu Sans Book';
+@sans-italic: 'DejaVu Sans Oblique';
+
+@halo-fill: rgba(255, 255, 255, 0.1);
+@halo-radius: 2;
+
+@dark: #303030;
+@medium: #666;
+
+@water-fill: rgb(136, 213, 234);
+@water-line: #3499ad;
+@water-text: darken(@water-line, 8%);
+
+@glacier-fill: white;
+@glacier-line: @water-line;
+
+@boundary: yellow;
+
+@road-color: #ffffbf;
+@road-casing: #555;
+
+@contour-color: #88724e;
+
+@xs: 10;
+@sm: 11;
+@md: 12;
+@lg: 13;
+@xl: 14;
+@xxl: 16;
+
 Map {
   background-color: @background;
 }
 
-#buildings {
+/*#buildings {*/
+#polygons::buildings[building='yes'] {
   // TODO: use building renderer at high zoom levels
   polygon-opacity: 1;
-  polygon-fill: #333;
+  polygon-fill: @dark;
 }
 
 #hillshade {
@@ -22,51 +53,3 @@ Map {
     stop(1, #888)
     stop(256, #fff);
 }
-
-// TODO: correct data to use mountain range where appropriate
-#lines::glaciers[natural='glacier'] {
-  line-width:0;
-  line-color: red;
-
-  text-face-name: 'DejaVu Sans Oblique';
-  text-fill: @water-line;
-  text-halo-fill: white;
-  text-halo-radius: 0.7;
-
-  text-size: 13;
-
-  text-name: [name];
-  text-placement: line;
-  //text-character-spacing: 10;
-  /*text-max-char-angle-delta: 15;*/
-}
-
-#lines::ridges[natural='mountain_range'],
-#lines::ridges[natural='valley'],
-#lines::ridges[natural='cliff'],
-#lines::ridges[natural='ridge'] {
-  line-width:0;
-  line-color: red;
-
-  text-face-name: 'DejaVu Sans Oblique';
-  text-fill: #666;
-  text-halo-fill: white;
-  text-halo-radius: 0.7;
-
-  text-size: 16;
-
-  [length<2500] {
-    text-size: 13;
-  }
-
-  text-spacing: 500;
-
-  text-name: "[name].replace(' ', '       ')";
-  text-placement: line;
-  //text-character-spacing: 10;
-  /*text-max-char-angle-delta: 15;*/
-  text-transform: uppercase;
-
-}
-
-
