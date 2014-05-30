@@ -22,6 +22,13 @@
   text-size: @xxl;
   text-spacing: 500;
 
+  [zoom=11] {
+    text-name: [name];
+    text-character-spacing: 1;
+    text-size: @xs;
+    text-fill: @medium;
+  }
+
   [length<2500] {
     text-size: @lg;
   }

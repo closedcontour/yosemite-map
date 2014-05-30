@@ -12,6 +12,7 @@
 
 @dark: #303030;
 @medium: #666;
+@light: #999;
 
 @water-fill: rgb(136, 213, 234);
 @water-line: #3499ad;
@@ -27,6 +28,7 @@
 
 @contour-color: #88724e;
 
+@xxs: 9;
 @xs: 10;
 @sm: 11;
 @md: 12;
@@ -47,7 +49,7 @@ Map {
 
 #hillshade {
   raster-opacity:1;
-  // TODO: interpolation at higher zoom levels
+  raster-scaling: bilinear;
   raster-colorizer-stops:
     stop(0, @background)
     stop(1, #888)

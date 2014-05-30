@@ -25,7 +25,6 @@
     "line-labels.mss",
     "point-labels.mss",
     "polygon-labels.mss",
-    "gnis.mss",
     "boundary.mss",
     "contours.mss"
   ],
@@ -288,7 +287,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "planet_osm_point",
+        "table": "(select * from planet_osm_point order by weight) as points",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -350,7 +349,7 @@
     }
   ],
   "scale": 1,
-  "metatile": 4,
+  "metatile": 9,
   "name": "Yosemite Closed Contour",
   "description": "",
   "attribution": ""
