@@ -12,27 +12,21 @@
 #line-labels::ridges[natural='valley'],
 #line-labels::ridges[natural='cliff'],
 #line-labels::ridges[natural='ridge'] {
-  text-name: "[name].replace(' ', '     ')";
-  text-face-name: @sans-italic;
-  text-fill: @medium;
-  text-halo-fill: @halo-fill;
-  text-halo-radius: @halo-radius;
-  text-placement: line;
-  text-transform: uppercase;
-  text-character-spacing: 4;
-  text-size: @xxl;
-  text-spacing: 500;
-
-  [zoom=11] {
-    text-name: [name];
-    text-character-spacing: 1;
-    text-size: @xs;
+  [zoom >= 13] {
+    text-name: "[name].replace(' ', '   ')";
+    text-face-name: @sans-italic;
     text-fill: @medium;
-  }
-
-  [length<2500] {
+    text-halo-fill: @halo-fill;
+    text-halo-radius: @halo-radius;
+    text-placement: line;
+    text-transform: uppercase;
+    text-character-spacing: 2;
     text-size: @lg;
+    text-spacing: 500;
   }
+  /*[length<2500] {
+    text-size: @lg;
+  }*/
 }
 
 #line-labels::trails[highway='path'][zoom >= 13][name != 'none'] {
@@ -56,4 +50,26 @@
   text-placement: line;
   text-dy: -7;
   text-min-distance: 200;
+}
+
+#macro-line-labels::ridges[natural='mountain_range'],
+#macro-line-labels::ridges[natural='valley'],
+#macro-line-labels::ridges[natural='cliff'],
+#macro-line-labels::ridges[natural='ridge'] {
+  [zoom <= 12] {
+    text-name: [name];
+    text-face-name: @sans-italic;
+    text-fill: @medium;
+    text-halo-fill: @halo-fill;
+    text-halo-radius: @halo-radius;
+    text-placement: line;
+    text-transform: uppercase;
+    text-size: @xs;
+    text-spacing: 500;
+    text-character-spacing: 1;
+    text-max-char-angle-delta: 100;
+    /*[length<2500] {
+      text-size: @lg;
+    }*/
+  }
 }

@@ -220,6 +220,34 @@
       "name": "points"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "macro-line-labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "macro-line-labels"
+    },
+    {
       "extent": [
         -119.95769990359035,
         37.391799968795965,
@@ -250,34 +278,6 @@
       "name": "polygon-labels"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        -119.95769990359035,
-        37.391799968795965,
-        -119.10079991850917,
-        38.26169995893122
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
-        "dbname": "closedcontour",
-        "host": "localhost",
-        "port": "5432",
-        "user": "closedcontour",
-        "password": "closedcontour"
-      },
-      "id": "line-labels",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "line-labels"
-    },
-    {
       "geometry": "point",
       "extent": [
         -119.95706793878797,
@@ -304,6 +304,34 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "point-labels"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.26169995893122
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4616461.49",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "line-labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "line-labels"
     },
     {
       "geometry": "linestring",

@@ -1,5 +1,6 @@
 #polygon-labels::lakes[natural="water"][zoom >= 11] {
   text-name: [name];
+  text-placement: interior;
   text-face-name: @serif;
   text-fill: @water-text;
   text-halo-fill: @halo-fill;

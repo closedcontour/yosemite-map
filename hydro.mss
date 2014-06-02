@@ -5,7 +5,8 @@
   line-opacity: 0.3;
 }
 
-#polygons::lakes[natural="water"] {
+#polygons::filled-water[waterway="riverbank"],
+#polygons::filled-water[natural="water"] {
   polygon-fill: @water-fill;
   line-color: @water-line;
 
@@ -29,12 +30,4 @@
   [intermittent="yes"] {
     line-dasharray: 4,2;
   }
-}
-
-#polygons[waterway="riverbank"] {
-  // TODO: variable line width
-  line-color: @water-line;
-  line-width: 0.5;
-  polygon-opacity: 1;
-  polygon-fill: @water-fill;
 }
