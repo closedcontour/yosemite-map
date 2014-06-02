@@ -42,9 +42,8 @@
   // Dome-y Rock
   [PIFINAL >= 961][PIFINAL <= 964] {
     polygon-opacity: 0.3;
-    /*polygon-fill: #C9D6D3;*/
     polygon-fill: @rock;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.1;
     }
@@ -53,7 +52,7 @@
   // Shrub
   [PIFINAL >= 5000][PIFINAL < 7551] {
     polygon-fill: @shrub;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.1;
     }
@@ -64,7 +63,7 @@
   [PIFINAL = 920],
   [PIFINAL >= 1000][PIFINAL < 5000] {
     polygon-fill: @forest;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.2;
     }
@@ -90,7 +89,7 @@
   [PIFINAL = 700] {
     polygon-fill: @rock;
     polygon-opacity: 0.7;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/talus.png');
     }
   }
@@ -99,7 +98,7 @@
   [PIFINAL >= 7000][PIFINAL < 8000] {
     polygon-fill: @meadow;
     polygon-opacity: 0.3;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/bg-noise.png');
     }
   }
@@ -107,7 +106,7 @@
   [PIFINAL >= 8000][PIFINAL < 10000] {
     polygon-fill: @meadow;
     polygon-opacity: 0.3;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/marsh.png');
     }
   }
@@ -116,7 +115,7 @@
   [PIFINAL = 200] {
     polygon-opacity: 0.7;
     polygon-fill: @rock;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/scree.png');
     }
   }
@@ -124,7 +123,7 @@
   [PIFINAL = 500] {
     polygon-fill: @rock;
     polygon-opacity: 0.7;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.1;
     }

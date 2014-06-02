@@ -1,7 +1,7 @@
 #line-labels::glaciers[natural='glacier'] {
   text-name: [name];
   text-placement: line;
-  text-face-name: @sans-italic;
+  text-face-name: @serif-italic;
   text-fill: @water-line;
   text-halo-fill: @halo-fill;
   text-halo-radius: @halo-radius;
@@ -12,13 +12,14 @@
 #line-labels::ridges[natural='valley'],
 #line-labels::ridges[natural='cliff'],
 #line-labels::ridges[natural='ridge'] {
-  text-name: "[name].replace(' ', '       ')";
+  text-name: "[name].replace(' ', '     ')";
   text-face-name: @sans-italic;
   text-fill: @medium;
   text-halo-fill: @halo-fill;
   text-halo-radius: @halo-radius;
   text-placement: line;
   text-transform: uppercase;
+  text-character-spacing: 4;
   text-size: @xxl;
   text-spacing: 500;
 
@@ -46,11 +47,11 @@
 }
 
 #line-labels::hydro[waterway="stream"][zoom >= 13] {
-  text-face-name: @sans-italic;
+  text-face-name: @serif-italic;
   text-fill: @water-text;
   text-halo-fill: @halo-fill;
   text-halo-radius: @halo-radius;
-  text-size: 12;
+  text-size: @lg;
   text-name: [name];
   text-placement: line;
   text-dy: -7;

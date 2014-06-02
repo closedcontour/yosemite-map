@@ -4,19 +4,21 @@
 
 @background: #dadada;
 
-@sans: 'DejaVu Sans Book';
-@sans-italic: 'DejaVu Sans Oblique';
+@sans: 'Univers 57 Condensed Regular', 'DejaVu Sans Condensed';
+@sans-italic: 'Univers 57 Condensed Oblique', 'DejaVu Sans Condensed Oblique';
+@serif: 'Minion Pro SmBd Cond Regular', 'DejaVu Serif Condensed';
+@serif-italic: 'Minion Pro SmBd Cond Capt Italic', 'DejaVu Serif Condensed Italic';
 
 @halo-fill: rgba(255, 255, 255, 0.1);
 @halo-radius: 2;
 
-@dark: #303030;
+@dark: #484848;
 @medium: #666;
 @light: #999;
 
 @water-fill: rgb(136, 213, 234);
 @water-line: #3499ad;
-@water-text: darken(@water-line, 8%);
+@water-text: darken(@water-line, 4%);
 
 @glacier-fill: white;
 @glacier-line: @water-line;
@@ -30,17 +32,18 @@
 
 @xxs: 9;
 @xs: 10;
-@sm: 11;
-@md: 12;
-@lg: 13;
-@xl: 14;
-@xxl: 16;
+@sm: 12;
+@md: 13;
+@lg: 14;
+@xl: 15;
+@xxl: 16.5;
+
+@texture-min-level: 12;
 
 Map {
   background-color: @background;
 }
 
-/*#buildings {*/
 #polygons::buildings[building='yes'] {
   // TODO: use building renderer at high zoom levels
   polygon-opacity: 1;

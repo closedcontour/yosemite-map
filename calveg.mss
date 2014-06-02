@@ -51,7 +51,7 @@
   [COVERTYPE = 'BAR'] {
     polygon-fill: @rock;
     polygon-opacity: 0.7;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.1;
     }
@@ -61,7 +61,7 @@
   [COVERTYPE = 'HDW'],
   [COVERTYPE = 'CON'] {
     polygon-fill: @forest;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.2;
     }
@@ -70,7 +70,7 @@
   [COVERTYPE = 'HEB'],
   [COVERTYPE = 'SHB'] {
     polygon-fill: @shrub;
-    [zoom >= 12] {
+    [zoom >= @texture-min-level] {
       polygon-pattern-file: url('img/forest-bump.png');
       polygon-pattern-opacity: 0.1;
     }

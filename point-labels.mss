@@ -3,6 +3,7 @@
 // All point styles
 #point-labels [tourism='viewpoint'],
 #point-labels [tourism='camp_site'],
+#point-labels [tourism='picnic_site'],
 #point-labels [natural='pillar'],
 #point-labels [natural='dome'],
 #point-labels [natural='peak'],
@@ -15,6 +16,7 @@
         // Things with markers
         [zoom > 12],
         [zoom = 12][weight="major"] {
+            [tourism='picnic_site'],
             [tourism='viewpoint'],
             [tourism='camp_site'],
             [natural='pillar'],
@@ -23,7 +25,7 @@
             [natural='wood'] {
                 marker-width: 4;
                 marker-height: 4;
-                marker-fill: @medium;
+                marker-fill: darken(@medium, 10%);
                 marker-line-width: 0;
                 text-dx: 5;
 
@@ -33,7 +35,7 @@
                     marker-width: 8;
                     marker-height: 8;
                     marker-line-width: 0;
-                    text-dx: 5;
+                    text-dx: 6;
                 }
 
                 [natural='wood'] {
@@ -50,6 +52,13 @@
                     text-dx: 8;
                 }
 
+                [tourism='picnic_site'] {
+                    marker-file: url(img/star-18.svg);
+                    marker-width: 14;
+                    marker-height: 14;
+                    text-dx: 8;
+                }
+
                 marker-allow-overlap: true;
             }
         }
@@ -57,6 +66,7 @@
         text-name: [name];
         // Left-Right text placement
         [tourism='viewpoint'],
+        [tourism='picnic_site'],
         [tourism='camp_site'],
         [natural='pillar'],
         [natural='dome'],
@@ -69,6 +79,7 @@
         text-face-name: @sans;
         text-halo-fill: @halo-fill;
         text-halo-radius: @halo-radius;
+        text-line-spacing: -3.5;
         text-fill: @dark;
         text-wrap-width: 30;
 
