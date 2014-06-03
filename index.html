@@ -4,11 +4,19 @@
     <meta charset=utf-8 />
     <title>Yosmite Map - closedcontour.com</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <link href="css/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+
     <style>
       body { margin:0; padding:0; }
+
       #header {
         position:absolute;
         top:0;
@@ -23,21 +31,76 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         padding-left: 15px;
-        text-align: center;
       }
 
-      #map { position:absolute; top:50px; bottom:0; width:100%; }
+      #search-box {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-size: 16px;
+        width: 300px;
+        outline: none;
+        background: #fffff7;
+        border-radius: 3px;
+        border: 1px solid #CAC8AF;
+        padding: 5px;
+      }
 
+      #map {
+        position:absolute;
+        top:50px;
+        bottom:0;
+        width:100%;
+      }
     </style>
+
+    <script>
+      $(document).ready(function() {
+        var urlBase = 'http://s3.amazonaws.com/closedcontour/yose/v0.2/'
+        var map = L.mapbox.map('map', urlBase + 'metadata.json')
+          .setView([37.7537,-119.5238], 12);
+
+        var initSearch = function (rows) {
+          rows = _.sortBy(rows, 'label');
+          $("#search-box").autocomplete({
+            autoFocus: true,
+            minLength: 3,
+            source: rows,
+            matchContains: true,
+            position: { my: "right top", at: "right bottom", collision: "none" },
+            formatItem: function(row, i, max) {
+              return row.name;
+            },
+            formatMatch: function(row, i, max) {
+              return row.name;
+            },
+            formatResult: function(row) {
+              return row.name;
+            },
+            select: function(event, row) {
+              if (row.item.box) {
+                map.fitBounds(L.latLngBounds(row.item.box));
+              } else if (row.item.point) {
+                var zoom = Math.max(15, map.getZoom());
+                map.setView(row.item.point, zoom);
+              }
+            }
+          });
+        };
+
+        $.ajax({
+          url: urlBase + "search-index.json",
+        }).done(initSearch);
+      });
+    </script>
   </head>
 
   <body>
-    <div id='header' class='color-secondary-2-1'>Yosemite National Park</div>
+    <div id='header'>
+      Yosemite National Park
+      <input type="text" id="search-box" placeholder="Search Yosemite place names..."></input>
+    </div>
     <div id='map'></div>
-    <script>
-    var map = L.mapbox.map('map', 'https://s3.amazonaws.com/closedcontour/yose/v0.1/metadata.json')
-        .setView([37.7537,-119.5238], 12);
-    </script>
   </body>
 
 </html>
