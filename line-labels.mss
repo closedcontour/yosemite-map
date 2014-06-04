@@ -11,6 +11,9 @@
 #line-labels::ridges[natural='mountain_range'],
 #line-labels::ridges[natural='valley'],
 #line-labels::ridges[natural='cliff'],
+#line-labels::ridges[natural='meadow'],
+#line-labels::ridges[natural='flat'],
+#line-labels::ridges[natural='peak'],
 #line-labels::ridges[natural='ridge'] {
   [zoom >= 13] {
     text-name: "[name].replace(' ', '   ')";
@@ -55,6 +58,9 @@
 #macro-line-labels::ridges[natural='mountain_range'],
 #macro-line-labels::ridges[natural='valley'],
 #macro-line-labels::ridges[natural='cliff'],
+#macro-line-labels::ridges[natural='meadow'],
+#macro-line-labels::ridges[natural='flat'],
+#macro-line-labels::ridges[natural='peak'],
 #macro-line-labels::ridges[natural='ridge'] {
   [zoom <= 12] {
     text-name: [name];

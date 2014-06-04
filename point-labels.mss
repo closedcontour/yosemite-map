@@ -9,6 +9,7 @@
 #point-labels [natural='peak'],
 #point-labels [natural='wood'],
 #point-labels [natural='meadow'],
+#point-labels [natural='flat'],
 #point-labels [natural='cliff'],
 #point-labels [natural='saddle']
 {
@@ -81,7 +82,7 @@
         text-halo-radius: @halo-radius;
         text-line-spacing: -3.5;
         text-fill: @dark;
-        text-wrap-width: 30;
+        text-wrap-width: 36;
 
         [zoom <= 12] { text-size: @sm; }
         [zoom = 13] { text-size: @md; }
