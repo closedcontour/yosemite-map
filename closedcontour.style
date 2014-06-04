@@ -1,0 +1,23 @@
+node,way name text linear
+node,way natural text polygon
+node,way weight text linear
+node,way tourism text linear
+node,way waterway text polygon
+node,way intermittent text linear
+node,way building text polygon
+node,way man_made text linear
+
+way boundary text linear
+way highway text linear
+way service text linear
+way surface text linear
+way tunnel text linear
+way way_area real
+
+# node,way place text linear
+# node,way amenity text linear
+# node,way landuse text linear
+# node,way bridge text linear
+# node,way leisure text linear
+# node,way aeroway text linear
+

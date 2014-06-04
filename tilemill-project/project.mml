@@ -40,7 +40,7 @@
       "id": "hillshade",
       "class": "",
       "Datasource": {
-        "file": "layers/hillshade/yose_10m_wm_hillshade.tif",
+        "file": "data/hillshade/yose_10m_wm_hillshade.tif",
         "band": "1"
       },
       "layer": null,
@@ -62,7 +62,7 @@
       "id": "veg",
       "class": "",
       "Datasource": {
-        "file": "layers/landcover/yose/yose_97veg_clipped_wgs84.shp",
+        "file": "data/landcover/yose_97veg_clipped_wgs84.shp",
         "id": "veg",
         "project": "yosemite",
         "srs": ""
@@ -84,7 +84,7 @@
       "id": "calveg",
       "class": "",
       "Datasource": {
-        "file": "layers/landcover/calveg/calveg-merged.shp"
+        "file": "data/landcover/calveg-merged.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -103,7 +103,7 @@
       "id": "no-ice-contours",
       "class": "",
       "Datasource": {
-        "file": "layers/contours/no-ice-contour-40ft.shp"
+        "file": "data/contour/no-ice-contour-40ft.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -152,7 +152,7 @@
       "id": "ice-contours",
       "class": "",
       "Datasource": {
-        "file": "layers/contours/ice-contour-40ft.shp"
+        "file": "data/contour/ice-contour-40ft.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -344,7 +344,7 @@
       "id": "contour-labels",
       "class": "",
       "Datasource": {
-        "file": "layers/contours/no-ice-contour-40ft.shp"
+        "file": "data/contour/no-ice-contour-40ft.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -363,7 +363,7 @@
       "id": "map-boundary",
       "class": "",
       "Datasource": {
-        "file": "layers/boundary/map-boundary.json",
+        "file": "data/map-boundary.json",
         "layer": "OGRGeoJSON",
         "id": "map-boundary",
         "project": "yosemite",
@@ -377,8 +377,8 @@
     }
   ],
   "scale": 1,
-  "metatile": 9,
-  "name": "Yosemite Closed Contour",
+  "metatile": 2,
+  "name": "closedcontour - Yosemite",
   "description": "",
   "attribution": ""
 }
