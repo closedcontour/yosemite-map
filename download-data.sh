@@ -24,9 +24,9 @@ if [ ! -d contour ]; then
 	echo Downloading $ICE_CONTOUR_URL
 	curl -O $ICE_CONTOUR_URL
 	tar xjfv $ICE_CONTOUR_FILE
-	#echo Downloading $CONTOUR_URL
-	#curl -O $CONTOUR_URL
-	#tar xjfv $CONTOUR_FILE
+	echo Downloading $CONTOUR_URL
+	curl -O $CONTOUR_URL
+	tar xjfv $CONTOUR_FILE
 	cd ..
 fi
 
