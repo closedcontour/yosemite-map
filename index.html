@@ -56,9 +56,11 @@
 
     <script>
       $(document).ready(function() {
-        var urlBase = 'http://s3.amazonaws.com/closedcontour/yose/v0.2/'
+        var urlBase = 'http://s3.amazonaws.com/closedcontour/yose/v0.3/'
         var map = L.mapbox.map('map', urlBase + 'metadata.json')
           .setView([37.7537,-119.5238], 12);
+
+        L.control.scale().addTo(map);
 
         var initSearch = function (rows) {
           rows = _.sortBy(rows, 'label');
@@ -93,14 +95,14 @@
         }).done(initSearch);
       });
 
-      // Google Analytics until GitHub gets their own tracking.      
+      // Google Analytics until GitHub gets their own tracking.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-51649999-1', 'closedcontour.github.io');
       ga('send', 'pageview');
-      
+
     </script>
   </head>
 
