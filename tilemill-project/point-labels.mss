@@ -4,6 +4,7 @@
 #point-labels [tourism='viewpoint'],
 #point-labels [tourism='camp_site'],
 #point-labels [tourism='picnic_site'],
+#point-labels [highway='trailhead'],
 #point-labels [natural='pillar'],
 #point-labels [natural='dome'],
 #point-labels [natural='peak'],
@@ -20,6 +21,7 @@
             [tourism='picnic_site'],
             [tourism='viewpoint'],
             [tourism='camp_site'],
+            [highway='trailhead'],
             [natural='pillar'],
             [natural='dome'],
             [natural='peak'],
@@ -35,6 +37,10 @@
                     marker-file: url(img/triangle-12.svg);
                     marker-width: 8;
                     marker-height: 8;
+                    [zoom=12] {
+                        marker-width: 7;
+                        marker-height: 7;
+                    }
                     marker-line-width: 0;
                     text-dx: 6;
                 }
@@ -45,6 +51,14 @@
                     marker-height: 18;
                     text-dx: 10;
                 }
+
+                [highway='trailhead'] {
+                    marker-file: url(img/trailhead.svg);
+                    marker-width: 11.4;
+                    marker-height: 16;
+                    text-dx: 10;
+                }
+
 
                 [tourism='camp_site'] {
                     marker-file: url(img/campsite-18.svg);
@@ -69,6 +83,7 @@
         [tourism='viewpoint'],
         [tourism='picnic_site'],
         [tourism='camp_site'],
+        [highway='trailhead'],
         [natural='pillar'],
         [natural='dome'],
         [natural='peak'],
@@ -150,4 +165,14 @@
     [zoom >= 15] { text-size: @lg; marker-width: 6; }
 
   }
+}
+
+#trail-end-points[zoom>=14],
+#trail-start-points[zoom>=14] {
+    marker-fill: @medium;
+    marker-line-width: 0;
+    marker-allow-overlap: true;
+    [zoom=14] { marker-width: 3; marker-height: 3; }
+    [zoom=15] { marker-width: 4; marker-height: 4; }
+    [zoom=16] { marker-width: 5; marker-height: 5; }
 }

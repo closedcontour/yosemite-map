@@ -84,5 +84,6 @@
     text-halo-fill: @halo-fill;
     text-halo-radius: @halo-radius;
     text-size: @xs;
+    text-spacing: 500;
   }
 }

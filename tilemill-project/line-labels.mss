@@ -79,3 +79,24 @@
     }*/
   }
 }
+
+#macro-line-labels::mileages[highway='path'][zoom >= 14] {
+  text-name: '';
+  text-face-name: @sans;
+  text-fill: @dark;
+  text-halo-fill: @halo-fill;
+  text-halo-radius: @halo-radius;
+
+  [zoom = 14][miles >= 0.5] {
+    text-name: [miles];
+    text-size: @sm;
+  }
+  [zoom = 15][miles >= 0.4] {
+    text-name: [miles];
+    text-size: @md;
+  }
+  [zoom = 16][miles >= 0.2] {
+    text-name: [miles];
+    text-size: @lg;
+  }
+}

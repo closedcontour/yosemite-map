@@ -5,7 +5,7 @@ pushd tilemill-project/data
 if [ ! -d db ]; then
 	mkdir db
 	cd db
-	CC_DATA_URL=$DATA_URL/db/cc-yose-0.2.osm.pbf
+	CC_DATA_URL=$DATA_URL/db/cc-yose-0.3.osm.pbf
 	echo Downloading $CC_DATA_URL
 	curl -O $CC_DATA_URL
 	cd ..

@@ -6,9 +6,9 @@ node,way waterway text polygon
 node,way intermittent text linear
 node,way building text polygon
 node,way man_made text linear
+node,way highway text linear
 
 way boundary text linear
-way highway text linear
 way service text linear
 way surface text linear
 way tunnel text linear

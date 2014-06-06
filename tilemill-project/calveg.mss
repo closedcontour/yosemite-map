@@ -3,7 +3,6 @@
 // TODO: better mapping: http://www.fs.usda.gov/detail/r5/landmanagement/resourcemanagement/?cid=stelprdb5365219;
 
 #calveg {
-  polygon-fill: red;
   polygon-opacity: 0.5;
 
 /*
@@ -81,10 +80,14 @@
     polygon-fill: blue;
   }
 
-  /*[COVERTYPE = 'URB'],*/
   [COVERTYPE = 'AGR'] {
     polygon-fill: @meadow;
     polygon-opacity: 0.5;
+  }
+
+  [COVERTYPE = 'URB'] {
+    polygon-fill: @urban-fill;
+    polygon-opacity: 0.7;
   }
 
 }

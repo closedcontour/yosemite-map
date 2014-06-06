@@ -28,6 +28,8 @@
 @road-color: #ffffbf;
 @road-casing: #555;
 
+@urban-fill: #AD9034;
+
 @contour-color: #88724e;
 
 @xxs: 9;

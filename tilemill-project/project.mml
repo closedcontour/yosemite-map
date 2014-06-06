@@ -166,6 +166,62 @@
         -119.95769990359035,
         37.391799968795965,
         -119.10079991850917,
+        38.27363961282019
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select ST_EndPoint(way) as way from planet_osm_line where highway like 'path' order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4618154.36",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "trail-end-points",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "trail-end-points"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
+        38.27363961282019
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select ST_StartPoint(way) as way from planet_osm_line where highway like 'path' order by name) as lines",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13353630.07,4493860.27,-13258240.4,4618154.36",
+        "dbname": "closedcontour",
+        "host": "localhost",
+        "port": "5432",
+        "user": "closedcontour",
+        "password": "closedcontour"
+      },
+      "id": "trail-start-points",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "trail-start-points"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.95769990359035,
+        37.391799968795965,
+        -119.10079991850917,
         38.26169995893122
       ],
       "Datasource": {
@@ -229,7 +285,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select *,ST_Length(way) as length from planet_osm_line order by name) as lines",
+        "table": "(select *,round((ST_Length(way)/1.26611354999307*0.000621371)::numeric,1) as miles, ST_Length(way) as length from planet_osm_line order by name) as lines",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -238,7 +294,10 @@
         "host": "localhost",
         "port": "5432",
         "user": "closedcontour",
-        "password": "closedcontour"
+        "password": "closedcontour",
+        "id": "macro-line-labels",
+        "project": "yosemite",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "macro-line-labels",
       "class": "",
@@ -377,7 +436,7 @@
     }
   ],
   "scale": 1,
-  "metatile": 2,
+  "metatile": 9,
   "name": "closedcontour - Yosemite",
   "description": "",
   "attribution": ""
