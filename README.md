@@ -58,8 +58,9 @@ Data for this map come from:
   * Park Landcover
   * Buildings
   * Picnic Areas
-* USDA FS
+* Forest Service
   * CALVEG Landcover
+  * Trails in Inyo, Sierra, Stanislaus, and Humboldt-Toiyabe National Forests
 * Rock Climbs of Tuolumne Meadows, Don Reid and Chris Falkenstein
   * Tuolumne Meadows dome names
 
@@ -71,6 +72,8 @@ The following software has been used extensively in developing this map:
 * [GDAL and OGR](http://www.gdal.org/)
 * [JOSM](https://josm.openstreetmap.de/)
 * [Osmosis](https://github.com/openstreetmap/osmosis)
+* [ogr2osm](https://github.com/pnorman/ogr2osm)
+* [osmtogeojson](https://github.com/tyrasd/osmtogeojson/)
 
 License
 ----
