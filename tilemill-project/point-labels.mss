@@ -1,6 +1,26 @@
 // TODO: smaller triangles
 
-// All point styles
+// All serif point styles
+#point-labels [place='populated'][zoom >= 12] {
+    text-name: [name];
+    // Left-Right text placement
+    text-face-name: @serif;
+    text-halo-fill: @halo-fill;
+    text-halo-radius: @halo-radius;
+    text-line-spacing: -3.5;
+    text-fill: @dark;
+    text-wrap-width: 36;
+
+    [zoom <= 12] { text-size: @md; }
+    [zoom = 13] { text-size: @xl; }
+    [zoom >= 14] { text-size: @xxl; }
+
+    [weight!="major"][zoom=12] {
+        text-name: '';
+    }
+}
+
+// All sans point styles
 #point-labels [tourism='viewpoint'],
 #point-labels [tourism='camp_site'],
 #point-labels [tourism='picnic_site'],
@@ -93,6 +113,11 @@
         }
 
         text-face-name: @sans;
+
+        [place='populated'] {
+            text-face-name: @serif;
+        }
+
         text-halo-fill: @halo-fill;
         text-halo-radius: @halo-radius;
         text-line-spacing: -3.5;

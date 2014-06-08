@@ -49,7 +49,12 @@ Map {
 #polygons::buildings[building='yes'] {
   // TODO: use building renderer at high zoom levels
   polygon-opacity: 1;
-  polygon-fill: @dark;
+  [zoom>=15] {
+    polygon-fill: @dark;
+  }
+  [zoom<=14] {
+    polygon-fill: lighten(@dark, 15%);
+  }
 }
 
 #hillshade {
