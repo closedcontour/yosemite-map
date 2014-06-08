@@ -106,8 +106,17 @@
   [PIFINAL >= 8000][PIFINAL < 10000] {
     polygon-fill: @meadow;
     polygon-opacity: 0.3;
-    [zoom >= @texture-min-level] {
-      polygon-pattern-file: url('img/marsh.png');
+    [zoom>=@texture-min-level][zoom=16] {
+      polygon-pattern-file: url('img/marsh-z16.png');
+      polygon-pattern-opacity: 0.5;
+    }
+    [zoom>=@texture-min-level][zoom=15] {
+      polygon-pattern-file: url('img/marsh-z15.png');
+      polygon-pattern-opacity: 0.5;
+    }
+    [zoom>=@texture-min-level][zoom<=14] {
+      polygon-pattern-file: url('img/marsh-z14.png');
+      polygon-pattern-opacity: 0.5;
     }
   }
 
