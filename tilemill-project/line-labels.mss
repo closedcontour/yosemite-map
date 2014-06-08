@@ -23,6 +23,9 @@
     text-halo-radius: @halo-radius;
     text-placement: line;
     text-transform: uppercase;
+    [natural='meadow'] {
+      text-transform: none;
+    }
     text-character-spacing: 2;
     text-size: @lg;
     text-spacing: 500;
@@ -40,6 +43,7 @@
   text-size: @sm;
   text-name: [name];
   text-placement: line;
+  text-spacing: 400;
   text-dy: -7;
 }
 
@@ -62,7 +66,7 @@
 #macro-line-labels::ridges[natural='flat'],
 #macro-line-labels::ridges[natural='peak'],
 #macro-line-labels::ridges[natural='ridge'] {
-  [zoom <= 12] {
+  [zoom>=11][zoom <= 12] {
     text-name: [name];
     text-face-name: @sans-italic;
     text-fill: @medium;
@@ -70,13 +74,13 @@
     text-halo-radius: @halo-radius;
     text-placement: line;
     text-transform: uppercase;
+    [natural='meadow'] {
+      text-transform: none;
+    }
     text-size: @xs;
     text-spacing: 500;
     text-character-spacing: 1;
-    text-max-char-angle-delta: 100;
-    /*[length<2500] {
-      text-size: @lg;
-    }*/
+    text-max-char-angle-delta: 20;
   }
 }
 
@@ -98,5 +102,19 @@
   [zoom = 16][miles >= 0.2] {
     text-name: [miles];
     text-size: @lg;
+  }
+}
+
+#macro-line-labels::np-label[weight='label'] {
+  [zoom = 10] {
+    text-name: [name];
+    text-face-name: @sans-italic;
+    text-fill: lighten(@medium, 10%);
+    text-halo-fill: @halo-fill;
+    text-halo-radius: 3px;
+    text-placement: line;
+    text-transform: uppercase;
+    text-size: 24px;
+    text-character-spacing: 4;
   }
 }

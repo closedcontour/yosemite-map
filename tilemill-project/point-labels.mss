@@ -1,7 +1,5 @@
-// TODO: smaller triangles
-
 // All serif point styles
-#point-labels [place='populated'][zoom >= 12] {
+#point-labels [place='populated'][zoom >= 11] {
     text-name: [name];
     // Left-Right text placement
     text-face-name: @serif;
@@ -9,13 +7,17 @@
     text-halo-radius: @halo-radius;
     text-line-spacing: -3.5;
     text-fill: @dark;
+    [zoom=11] {
+        text-fill: @medium;
+    }
     text-wrap-width: 36;
 
-    [zoom <= 12] { text-size: @md; }
+    [zoom <= 11] { text-size: @sm; }
+    [zoom = 12] { text-size: @lg; }
     [zoom = 13] { text-size: @xl; }
     [zoom >= 14] { text-size: @xxl; }
 
-    [weight!="major"][zoom=12] {
+    [weight!="major"][zoom<=12] {
         text-name: '';
     }
 }
@@ -34,10 +36,19 @@
 #point-labels [natural='cliff'],
 #point-labels [natural='saddle']
 {
-    [zoom >= 12] {
+    [zoom >= 11] {
+        text-wrap-width: 36;
+        text-face-name: @sans;
+        text-fill: @dark;
+        [zoom=11] {
+            text-fill: @medium;
+        }
+        text-halo-fill: @halo-fill;
+        text-halo-radius: @halo-radius;
+        text-line-spacing: -3.5;
         // Things with markers
         [zoom > 12],
-        [zoom = 12][weight="major"] {
+        [zoom <= 12][weight="major"] {
             [tourism='picnic_site'],
             [tourism='viewpoint'],
             [tourism='camp_site'],
@@ -46,23 +57,37 @@
             [natural='dome'],
             [natural='peak'],
             [natural='wood'] {
+                marker-allow-overlap: true;
                 marker-width: 4;
                 marker-height: 4;
                 marker-fill: darken(@medium, 10%);
                 marker-line-width: 0;
                 text-dx: 5;
 
+                [zoom=11] {
+                    marker-allow-overlap: false;
+                    marker-width: 2.5;
+                    marker-height: 2.5;
+                }
+
                 // TODO: marker sizing
                 [natural='peak'] {
                     marker-file: url(img/triangle-12.svg);
                     marker-width: 8;
                     marker-height: 8;
+                    text-dx: 6;
                     [zoom=12] {
                         marker-width: 7;
                         marker-height: 7;
                     }
+                    [zoom=11] {
+                        marker-width: 4;
+                        marker-height: 4;
+                        text-dx: 4;
+                        text-wrap-width: 24;
+
+                    }
                     marker-line-width: 0;
-                    text-dx: 6;
                 }
 
                 [natural='wood'] {
@@ -93,8 +118,6 @@
                     marker-height: 8;
                     text-dx: 8;
                 }
-
-                marker-allow-overlap: true;
             }
         }
 
@@ -112,24 +135,13 @@
             text-placements: "E,NE,SE,W,NW,SW";
         }
 
-        text-face-name: @sans;
-
-        [place='populated'] {
-            text-face-name: @serif;
-        }
-
-        text-halo-fill: @halo-fill;
-        text-halo-radius: @halo-radius;
-        text-line-spacing: -3.5;
-        text-fill: @dark;
-        text-wrap-width: 36;
-
-        [zoom <= 12] { text-size: @sm; }
+        [zoom <= 11] { text-size: @xs; }
+        [zoom = 12] { text-size: @sm; }
         [zoom = 13] { text-size: @md; }
         [zoom = 14] { text-size: @lg; }
         [zoom >= 15] { text-size: @xl; }
 
-        [weight!="major"][zoom=12] {
+        [weight!="major"][zoom<=12] {
             text-name: '';
         }
     }

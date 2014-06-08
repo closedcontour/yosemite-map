@@ -53,13 +53,15 @@
   [highway="service"][service="park"] {
     ::casing {
       line-color: @road-casing;
-      [zoom <= 12] { line-width: 0; }
+      [zoom <= 11] { line-width: 0; }
+      [zoom = 12] { line-width: 0.0; }
       [zoom = 13] { line-width: 1.5; }
       [zoom >= 14] { line-width: 3.0; }
     }
     ::main {
       line-color: @road-color;
-      [zoom <= 12] { line-width: 0; }
+      [zoom <= 11] { line-width: 0; }
+      [zoom = 12] { line-width: 0.6; }
       [zoom = 13] { line-width: 1.0; }
       [zoom >= 14] { line-width: 2.0; }
     }
@@ -75,8 +77,7 @@
     }
     ::main {
       line-color: @road-color;
-      [zoom <= 12] { line-width: 0; }
-      [zoom = 13] { line-width: 0.7; }
+      [zoom <= 13] { line-width: 0; }
       [zoom = 14] { line-width: 1.0; }
       [zoom >= 15] { line-width: 1.5; }
     }
@@ -86,14 +87,16 @@
   [surface="gravel"] {
     ::casing {
       line-color: @road-casing;
-      [zoom <= 12] { line-width: 0; }
+      [zoom <= 11] { line-width: 0; }
+      [zoom = 12] { line-width: 1.0; }
       [zoom = 13] { line-width: 1.5; }
       [zoom >= 14] { line-width: 3.0; }
     }
     ::main {
       line-color: @road-color;
       line-dasharray: 5,1;
-      [zoom <= 12] { line-width: 0; }
+      [zoom <= 11] { line-width: 0; }
+      [zoom = 12] { line-width: 0.6; line-dasharray: 2,0.5; }
       [zoom = 13] { line-width: 1.0; }
       [zoom >= 14] { line-width: 2.0; }
     }
