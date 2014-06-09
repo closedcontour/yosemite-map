@@ -77,4 +77,7 @@ The following software has been used extensively in developing this map:
 
 License
 ----
-TBD, at this time all rights are reserved.
+You can do whatever you want with the shell scripts.
+
+The data downloaded by the download-data.sh script, the generated tiles, and the style files (*.mms) to generate them are licensed under [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+
