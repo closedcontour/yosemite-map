@@ -6,16 +6,13 @@
     text-halo-fill: @halo-fill;
     text-halo-radius: @halo-radius;
     text-line-spacing: -3.5;
-    text-fill: @dark;
-    [zoom=11] {
-        text-fill: @medium;
-    }
     text-wrap-width: 36;
 
-    [zoom <= 11] { text-size: @sm; }
-    [zoom = 12] { text-size: @lg; }
-    [zoom = 13] { text-size: @xl; }
-    [zoom >= 14] { text-size: @xxl; }
+    [zoom <= 11] { text-size: @sm; text-fill: @medium; }
+    [zoom = 12] { text-size: @lg; text-fill: @medium; }
+    [zoom = 13] { text-size: @xl; text-fill: @dark; }
+    [zoom = 14] { text-size: @xxl; text-fill: @darker;  }
+    [zoom >= 15] { text-size: @xxl; text-fill: @darkest; }
 
     [weight!="major"][zoom<=12] {
         text-name: '';
@@ -39,10 +36,6 @@
     [zoom >= 11] {
         text-wrap-width: 36;
         text-face-name: @sans;
-        text-fill: @dark;
-        [zoom=11] {
-            text-fill: @medium;
-        }
         text-halo-fill: @halo-fill;
         text-halo-radius: @halo-radius;
         text-line-spacing: -3.5;
@@ -60,7 +53,14 @@
                 marker-allow-overlap: true;
                 marker-width: 4;
                 marker-height: 4;
-                marker-fill: darken(@medium, 10%);
+                /*marker-fill: darken(@medium, 10%);*/
+
+                [zoom <= 11] { marker-fill: darken(@medium, 5%); }
+                [zoom = 12] { marker-fill: darken(@medium, 5%); }
+                [zoom = 13] { marker-fill: darken(@dark, 5%); }
+                [zoom = 14] { marker-fill: darken(@darker, 5%);  }
+                [zoom >= 15] { marker-fill: darken(@darkest, 5%); }
+
                 marker-line-width: 0;
                 text-dx: 5;
 
@@ -70,7 +70,6 @@
                     marker-height: 2.5;
                 }
 
-                // TODO: marker sizing
                 [natural='peak'] {
                     marker-file: url(img/triangle-12.svg);
                     marker-width: 8;
@@ -135,11 +134,11 @@
             text-placements: "E,NE,SE,W,NW,SW";
         }
 
-        [zoom <= 11] { text-size: @xs; }
-        [zoom = 12] { text-size: @sm; }
-        [zoom = 13] { text-size: @md; }
-        [zoom = 14] { text-size: @lg; }
-        [zoom >= 15] { text-size: @xl; }
+        [zoom <= 11] { text-size: @xs; text-fill: @medium; }
+        [zoom = 12] { text-size: @sm; text-fill: @medium; }
+        [zoom = 13] { text-size: @md; text-fill: @dark; }
+        [zoom = 14] { text-size: @lg; text-fill: @darker;  }
+        [zoom >= 15] { text-size: @xl; text-fill: @darkest; }
 
         [weight!="major"][zoom<=12] {
             text-name: '';
@@ -155,7 +154,8 @@
     text-halo-fill: @halo-fill;
     text-halo-radius: @halo-radius;
     text-line-spacing: -3.5;
-    text-fill: @dark;
+    [zoom = 14] { text-fill: @darker;  }
+    [zoom >= 15] { text-fill: @darkest; }
     text-wrap-width: 30;
     text-dx: 6;
     text-size: @md;
@@ -179,10 +179,12 @@
         marker-fill: rgba(0,0,0,0);
         marker-line-color: @water-line;
         marker-line-width: 1.5;
+        [zoom >= 15] { marker-line-color: @dark-water-line; }
     }
     #point-labels [natural='waterfall'] {
         marker-fill: @water-line;
         marker-line-width: 0;
+        [zoom >= 15] { marker-fill: @dark-water-line; }
     }
     marker-allow-overlap: true;
     text-name: [name];
@@ -197,10 +199,9 @@
     text-halo-radius: @halo-radius;
     text-line-spacing: -3.5;
 
-    [zoom = 13] { text-size: @md; marker-width: 4; }
-    [zoom = 14] { text-size: @md; marker-width: 5; }
-    [zoom >= 15] { text-size: @lg; marker-width: 6; }
-
+    [zoom = 13] { text-size: @md; marker-width: 4; text-fill: @water-text; }
+    [zoom = 14] { text-size: @md; marker-width: 5; text-fill: @water-text;  }
+    [zoom >= 15] { text-size: @lg; marker-width: 6; text-fill: @dark-water-text; }
   }
 }
 

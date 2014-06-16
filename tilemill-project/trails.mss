@@ -20,6 +20,7 @@
   [zoom >= 15] {
     line-dasharray: 6,2;
     line-width: 1;
+    line-color: @darker;
   }
 
 }

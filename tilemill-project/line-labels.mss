@@ -19,6 +19,7 @@
     text-name: "[name].replace(' ', '   ')";
     text-face-name: @sans-italic;
     text-fill: @medium;
+    [zoom >= 15] { text-fill: @dark; }
     text-halo-fill: @halo-fill;
     text-halo-radius: @halo-radius;
     text-placement: line;
@@ -38,9 +39,12 @@
 #line-labels::trails[highway='path'][zoom >= 13][name != 'none'] {
   text-face-name: @sans;
   text-fill: @dark;
+  text-size: @sm;
+  [zoom = 13] { text-fill: @dark; }
+  [zoom = 14] { text-fill: @darker;  }
+  [zoom >= 15] { text-size: @md; text-fill: @darkest; }
   text-halo-fill: @halo-fill;
   text-halo-radius: @halo-radius;
-  text-size: @sm;
   text-name: [name];
   text-placement: line;
   text-spacing: 400;
@@ -57,6 +61,7 @@
   text-placement: line;
   text-dy: -7;
   text-min-distance: 200;
+  [zoom >= 15] { text-size: @xl; text-fill: @dark-water-text; }
 }
 
 #macro-line-labels::ridges[natural='mountain_range'],
@@ -94,14 +99,17 @@
   [zoom = 14][miles >= 0.5] {
     text-name: [miles];
     text-size: @sm;
+    text-fill: @dark;
   }
   [zoom = 15][miles >= 0.4] {
     text-name: [miles];
     text-size: @md;
+    text-fill: @darker;
   }
   [zoom = 16][miles >= 0.2] {
     text-name: [miles];
     text-size: @lg;
+    text-fill: @darker;
   }
 }
 

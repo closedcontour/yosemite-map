@@ -1,5 +1,3 @@
-// TODO: county line data
-// TODO: wilderness boundary
 // TODO: retina tiles
 
 @background: #dadada;
@@ -12,13 +10,16 @@
 @halo-fill: rgba(255, 255, 255, 0.1);
 @halo-radius: 2;
 
+@darkest: #202020;
+@darker: #333;
 @dark: #484848;
 @medium: #666;
-@light: #999;
 
 @water-fill: rgb(136, 213, 234);
 @water-line: #3499ad;
-@water-text: darken(@water-line, 4%);
+@dark-water-line: darken(@water-line, 4%);
+@water-text: @dark-water-line;
+@dark-water-text: darken(@water-text, 6%);
 
 @glacier-fill: white;
 @glacier-line: @water-line;

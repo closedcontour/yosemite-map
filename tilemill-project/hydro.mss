@@ -10,6 +10,7 @@
   polygon-fill: @water-fill;
   line-color: @water-line;
 
+  [zoom >= 15] { line-color: @dark-water-line; }
   [zoom >= 14] { line-width: 0.8; }
   [zoom = 13]  { line-width: 0.5; }
   [zoom = 12]  { line-width: 0.4; }
@@ -20,7 +21,7 @@
 #lines::hydro[waterway="stream"] {
   line-color: @water-line;
 
-  [zoom >= 15] { line-width: 1.5; }
+  [zoom >= 15] { line-width: 1.5; line-color: @dark-water-line; }
   [zoom = 14]  { line-width: 1.2; }
   [zoom = 13]  { line-width: 0.8; }
   [zoom = 12]  { line-width: 0.6; }

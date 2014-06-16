@@ -1,3 +1,7 @@
+@off: 0;
+@thin: 0.2;
+@thick: 0.4;
+@thicker: 0.8;
 
 #ice-contours {
   line-color: @water-line;
@@ -11,10 +15,10 @@
 #no-ice-contours {
 
   // 40 ft intervals
-  line-width: 0;
-  [zoom>=14] {
-    line-width: 0.2;
-  }
+  line-width: @off;
+  [zoom=14] { line-width: @thin; }
+  [zoom=15] { line-width: @thick; }
+  [zoom=16] { line-width: @thick; }
 
   // 200 ft intervals
   [elev_ft=0],
@@ -33,14 +37,16 @@
   [elev_ft=12200],[elev_ft=12400],[elev_ft=12600],[elev_ft=12800],[elev_ft=13000] {
 
     [zoom<=12] {
-      line-width: 0;
+      line-width: @off;
     }
     [zoom=13] {
-      line-width: 0.2;
+      line-width: @thin;
     }
-    [zoom>=14] {
-      line-width: 0.4;
+    [zoom=14] {
+      line-width: @thick;
     }
+    [zoom=15] { line-width: @thicker; }
+    [zoom=16] { line-width: @thicker; }
 
     // 1000 ft intervals
     [elev_ft=1000],
@@ -56,8 +62,11 @@
     [elev_ft=11000],
     [elev_ft=12000],
     [elev_ft=13000] {
-      [zoom>=12] {
-        line-width: 0.4;
+      [zoom>=12][zoom<=14] {
+        line-width: @thick;
+      }
+      [zoom>=15] {
+        line-width: @thicker;
       }
     }
   }
