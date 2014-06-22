@@ -1,4 +1,4 @@
-## 0.6 (not released), Jun 16, 2014
+## 0.6, Jun 21, 2014
 ### Data changes
 * Trail from TM stables to Soda Springs road.
 * Trail near Soda Springs.
