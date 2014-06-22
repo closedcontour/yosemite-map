@@ -1,3 +1,7 @@
+## 0.7, unreleased
+### Data changes
+* Clean up PCT trail in northwest.
+
 ## 0.6, Jun 21, 2014
 ### Data changes
 * Trail from TM stables to Soda Springs road.
