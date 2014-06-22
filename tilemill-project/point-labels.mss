@@ -204,13 +204,3 @@
     [zoom >= 15] { text-size: @lg; marker-width: 6; text-fill: @dark-water-text; }
   }
 }
-
-#trail-end-points[zoom>=14],
-#trail-start-points[zoom>=14] {
-    marker-fill: @medium;
-    marker-line-width: 0;
-    marker-allow-overlap: true;
-    [zoom=14] { marker-width: 3; marker-height: 3; }
-    [zoom=15] { marker-width: 4; marker-height: 4; }
-    [zoom=16] { marker-width: 5; marker-height: 5; }
-}
