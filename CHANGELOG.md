@@ -3,6 +3,9 @@
 * Clean up trail names throughout the park.
 * Clean up PCT trail in northwest.
 
+### Style changes
+* Label trails based on segments joined on trail names yielding less dense trail labels.
+
 ## 0.6, Jun 21, 2014
 ### Data changes
 * Trail from TM stables to Soda Springs road.
