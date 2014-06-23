@@ -36,7 +36,7 @@
   }*/
 }
 
-#line-labels::trails[highway='path'][zoom >= 13][name != 'none'] {
+#trail-lines::trails[zoom >= 13] {
   text-face-name: @sans;
   text-fill: @dark;
   text-size: @sm;
@@ -47,7 +47,7 @@
   text-halo-radius: @halo-radius;
   text-name: [name];
   text-placement: line;
-  text-spacing: 400;
+  text-spacing: 750;
   text-dy: -7;
 }
 
